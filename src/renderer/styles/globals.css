@@ -1,0 +1,137 @@
+@import "tailwindcss";
+@import "highlight.js/styles/github-dark.css";
+
+@theme {
+  --color-app: rgb(23 23 25);
+  --color-app-panel: rgb(32 32 34);
+  --color-app-panel-2: rgb(41 41 44);
+  --color-app-border: rgb(52 52 56);
+  --color-app-text: rgb(232 232 232);
+  --color-app-muted: rgb(160 160 160);
+  --color-app-accent: rgb(217 115 78);
+  --color-bubble-user: rgb(48 48 52);
+}
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background: var(--color-app);
+  color: var(--color-app-text);
+  overflow: hidden;
+}
+
+.bg-app { background: var(--color-app); }
+.bg-panel { background: var(--color-app-panel); }
+.bg-panel-2 { background: var(--color-app-panel-2); }
+.text-app { color: var(--color-app-text); }
+.text-muted { color: var(--color-app-muted); }
+.border-app { border-color: var(--color-app-border); }
+.text-accent { color: var(--color-app-accent); }
+
+/* Markdown readable defaults for assistant messages */
+.md-body {
+  line-height: 1.65;
+  font-size: 15px;
+}
+.md-body p { margin: 0.75em 0; }
+.md-body h1 { font-size: 1.5rem; font-weight: 700; margin: 1em 0 0.5em; }
+.md-body h2 { font-size: 1.25rem; font-weight: 700; margin: 1em 0 0.5em; }
+.md-body h3 { font-size: 1.1rem; font-weight: 700; margin: 1em 0 0.5em; }
+.md-body ul { list-style: disc; padding-left: 1.5em; margin: 0.5em 0; }
+.md-body ol { list-style: decimal; padding-left: 1.5em; margin: 0.5em 0; }
+.md-body li { margin: 0.25em 0; }
+.md-body code {
+  background: rgb(46 46 50);
+  padding: 1px 5px;
+  border-radius: 4px;
+  font-size: 0.9em;
+  font-family: "SF Mono", Menlo, Consolas, monospace;
+}
+.md-body pre {
+  background: rgb(28 28 30);
+  border: 1px solid var(--color-app-border);
+  padding: 12px 14px;
+  border-radius: 8px;
+  overflow-x: auto;
+  margin: 0.75em 0;
+  font-size: 0.88em;
+}
+.md-body pre code { background: transparent; padding: 0; }
+.md-body blockquote {
+  border-left: 3px solid var(--color-app-border);
+  padding: 0.25em 0 0.25em 1em;
+  color: var(--color-app-muted);
+  margin: 0.75em 0;
+}
+.md-body table {
+  border-collapse: collapse;
+  margin: 0.75em 0;
+}
+.md-body th, .md-body td {
+  border: 1px solid var(--color-app-border);
+  padding: 6px 10px;
+}
+.md-body th { background: rgb(40 40 44); font-weight: 600; }
+.md-body a { color: var(--color-app-accent); text-decoration: underline; }
+.md-body hr { border-color: var(--color-app-border); margin: 1em 0; }
+
+mark {
+  background: rgba(217, 115, 78, 0.35);
+  color: inherit;
+  padding: 0 2px;
+  border-radius: 2px;
+}
+
+.md-body details.thinking-block {
+  margin: 0.75em 0;
+  border: 1px solid var(--color-app-border);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.02);
+  overflow: hidden;
+}
+.md-body details.thinking-block > summary {
+  cursor: pointer;
+  padding: 8px 12px;
+  font-size: 0.9em;
+  color: var(--color-app-muted);
+  user-select: none;
+  list-style: none;
+}
+.md-body details.thinking-block > summary::-webkit-details-marker {
+  display: none;
+}
+.md-body details.thinking-block > summary::before {
+  content: "▸ ";
+  display: inline-block;
+  transition: transform 0.15s;
+}
+.md-body details.thinking-block[open] > summary::before {
+  content: "▾ ";
+}
+.md-body details.thinking-block[open] > summary {
+  border-bottom: 1px solid var(--color-app-border);
+}
+.md-body details.thinking-block > *:not(summary) {
+  padding: 0 14px;
+  color: var(--color-app-muted);
+  font-size: 0.95em;
+}
+.md-body details.thinking-block > p:first-of-type {
+  margin-top: 0.75em;
+}
+.md-body details.thinking-block > p:last-of-type {
+  margin-bottom: 0.75em;
+}
+
+/* Scrollbars */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.1);
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover { background: rgba(255,255,255,0.2); }

@@ -1,0 +1,73 @@
+[
+  {
+    "id": "gpt-conv-1",
+    "title": "Branched chat",
+    "create_time": 1725184800.0,
+    "update_time": 1725185100.0,
+    "default_model_slug": "gpt-4o",
+    "current_node": "node-d",
+    "mapping": {
+      "node-root": {
+        "id": "node-root",
+        "parent": null,
+        "children": ["node-sys"],
+        "message": null
+      },
+      "node-sys": {
+        "id": "node-sys",
+        "parent": "node-root",
+        "children": ["node-a"],
+        "message": {
+          "id": "node-sys",
+          "author": { "role": "system" },
+          "create_time": null,
+          "content": { "content_type": "text", "parts": [""] }
+        }
+      },
+      "node-a": {
+        "id": "node-a",
+        "parent": "node-sys",
+        "children": ["node-b", "node-c"],
+        "message": {
+          "id": "node-a",
+          "author": { "role": "user" },
+          "create_time": 1725184800.0,
+          "content": { "content_type": "text", "parts": ["Hi GPT, tell me a joke."] }
+        }
+      },
+      "node-b": {
+        "id": "node-b",
+        "parent": "node-a",
+        "children": [],
+        "message": {
+          "id": "node-b",
+          "author": { "role": "assistant" },
+          "create_time": 1725184850.0,
+          "content": { "content_type": "text", "parts": ["A dead branch — not chosen as current."] }
+        }
+      },
+      "node-c": {
+        "id": "node-c",
+        "parent": "node-a",
+        "children": ["node-d"],
+        "message": {
+          "id": "node-c",
+          "author": { "role": "assistant" },
+          "create_time": 1725184900.0,
+          "content": { "content_type": "text", "parts": ["Why did the chicken cross the road? To get to the other side."] }
+        }
+      },
+      "node-d": {
+        "id": "node-d",
+        "parent": "node-c",
+        "children": [],
+        "message": {
+          "id": "node-d",
+          "author": { "role": "user" },
+          "create_time": 1725185100.0,
+          "content": { "content_type": "text", "parts": ["Nice!"] }
+        }
+      }
+    }
+  }
+]

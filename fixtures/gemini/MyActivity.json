@@ -1,0 +1,23 @@
+[
+  {
+    "header": "Gemini Apps",
+    "title": "Prompted What is the capital of France?",
+    "time": "2025-09-10T14:00:00.000Z",
+    "description": "The capital of France is Paris.",
+    "products": ["Gemini Apps"]
+  },
+  {
+    "header": "Gemini Apps",
+    "title": "Prompted Tell me about Paris landmarks",
+    "time": "2025-09-10T14:02:00.000Z",
+    "description": "Paris landmarks include the Eiffel Tower, the Louvre, and Notre-Dame.",
+    "products": ["Gemini Apps"]
+  },
+  {
+    "header": "Gemini Apps",
+    "title": "Prompted How's the weather in Tokyo?",
+    "time": "2025-09-11T09:15:00.000Z",
+    "description": "I can't access real-time data, but Tokyo in September is usually warm.",
+    "products": ["Gemini Apps"]
+  }
+]

@@ -1,0 +1,11 @@
+node_modules/
+out/
+dist/
+.DS_Store
+*.log
+.vite/
+coverage/
+*.tsbuildinfo
+
+# Local Claude Code settings (per-machine)
+.claude/settings.local.json

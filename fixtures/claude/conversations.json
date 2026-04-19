@@ -1,0 +1,80 @@
+[
+  {
+    "uuid": "abc-001",
+    "name": "Hello Claude",
+    "created_at": "2025-09-01T10:00:00Z",
+    "updated_at": "2025-09-01T10:05:00Z",
+    "model": "claude-sonnet-4-5",
+    "chat_messages": [
+      {
+        "uuid": "m1",
+        "sender": "human",
+        "text": "你好 Claude，给我写个冒泡排序",
+        "created_at": "2025-09-01T10:00:00Z",
+        "content": [{ "type": "text", "text": "你好 Claude，给我写个冒泡排序" }]
+      },
+      {
+        "uuid": "m2",
+        "sender": "assistant",
+        "text": "Let me think about this.\n```js\nfunction bubbleSort(a) {}\n```",
+        "created_at": "2025-09-01T10:01:00Z",
+        "content": [
+          { "type": "thinking", "thinking": "The user wants bubble sort in JS. I should keep it simple." },
+          { "type": "text", "text": "Here is a simple implementation:\n\n```js\nfunction bubbleSort(a) {}\n```" }
+        ]
+      }
+    ]
+  },
+  {
+    "uuid": "abc-002",
+    "name": "",
+    "created_at": "2025-09-02T00:00:00Z",
+    "updated_at": "2025-09-02T00:00:00Z",
+    "model": "claude-opus-4-7",
+    "chat_messages": [
+      {
+        "uuid": "mx1",
+        "sender": "human",
+        "text": "How do I center a div in CSS?",
+        "created_at": "2025-09-02T00:00:00Z",
+        "content": [{ "type": "text", "text": "How do I center a div in CSS?" }]
+      },
+      {
+        "uuid": "mx2",
+        "sender": "assistant",
+        "text": "Use flexbox.",
+        "created_at": "2025-09-02T00:00:30Z",
+        "content": [
+          { "type": "text", "text": "This block is not supported on your current device yet." },
+          { "type": "text", "text": "Use flexbox." }
+        ]
+      }
+    ]
+  },
+  {
+    "uuid": "abc-003",
+    "name": "Empty chat — should be skipped",
+    "created_at": "2025-09-03T00:00:00Z",
+    "updated_at": "2025-09-03T00:00:00Z",
+    "model": "claude-opus-4-7",
+    "chat_messages": []
+  },
+  {
+    "uuid": "abc-004",
+    "name": null,
+    "created_at": "2025-09-04T00:00:00Z",
+    "updated_at": "2025-09-04T00:00:00Z",
+    "model": "claude-sonnet-4-5",
+    "chat_messages": [
+      {
+        "uuid": "mz1",
+        "sender": "assistant",
+        "text": "This block is not supported on your current device yet.",
+        "created_at": "2025-09-04T00:00:00Z",
+        "content": [
+          { "type": "text", "text": "This block is not supported on your current device yet." }
+        ]
+      }
+    ]
+  }
+]
